@@ -1,7 +1,9 @@
-# 👕 Qualicard Merch
+# 👕 QualicaRD Merch
 
-¡Bienvenido a **Qualicard Merch**, una tienda de prueba creada con fines educativos y creativos!  
+¡Bienvenido a **QualicaRD Merch**, una tienda de prueba creada con fines educativos y creativos!  
 Este proyecto muestra ideas de diseño para posibles camisetas inspiradas en el entorno de QualicaRD. **No son productos oficiales ni están a la venta.**
+
+https://javitorres3393.github.io/qualicard-merch
 
 ---
 
