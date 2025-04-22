@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle del Producto</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./recursos/css/producto.css">
+  <link rel="icon" href="./recursos/imagenes/icono.png">
+</head>
+<body>
+  <section class="detalle-producto">
+    <div class="contenedor-imagen">
+      <img src="./recursos/imagenes/polonegro1.png" alt="Imagen de la prenda">
+    </div>
+    <div class="contenedor-info">
+      <h1 class="titulo-producto">Polo Logo Negro</h1>
+      <p class="descripcion">Polo negro con diseño impreso. Confeccionada con materiales de alta calidad para máxima comodidad.</p>
+      <p class="precio">27,99 €</p>
+
+      <label for="talla" class="etiqueta-talla">Selecciona tu talla:</label>
+      <select id="talla" class="selector-talla" required>
+        <option value="">Selecciona una talla</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="XXL">XXL</option>
+      </select>
+
+      <button class="boton-carrito">Añadir al carrito</button>
+    </div>
+  </section>
+</body>
+</html>

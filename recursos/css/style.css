@@ -1,0 +1,277 @@
+/* Fuente principal */
+body {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* NAV */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Estilo para el logo */
+.logo {
+  transition: transform 0.3s ease; /* Animación suave */
+}
+
+/* Efecto de ampliación al pasar el cursor */
+.logo:hover {
+  transform: scale(1.1); /* Amplía el logo un 20% */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #c40000;
+  font-size: 18px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav ul li a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c40000;
+}
+
+/* TÍTULO DE SECCIÓN */
+.titulo-seccion {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  font-size: 32px;
+  color: #c40000;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.titulo-seccion a {
+  text-decoration: none;
+  color: #c40000;
+}
+
+.titulo-seccion a:hover {
+  text-decoration: underline;
+}
+
+/* CINTURÓN */
+.cinturon {
+  width: 100vw;
+  overflow: hidden;
+  background-color: #000;
+  border-top: 2px solid #c40000;
+  border-bottom: 2px solid #c40000;
+  padding: 10px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.cinturon-texto {
+  display: inline-block;
+  white-space: nowrap;
+  animation: deslizar-cinturon 15s linear infinite;
+  font-family: 'Playfair Display', serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #c40000;
+  text-transform: uppercase;
+}
+
+@keyframes deslizar-cinturon {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* CONTENIDO */
+.contenido {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TARJETAS */
+.tarjetas {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tarjeta {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(139, 0, 0, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+  font-family: 'Playfair Display', serif;
+}
+
+.tarjeta a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tarjeta:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-contenedor {
+  width: 100%;
+  overflow: hidden; /* Importante: oculta la parte que se desplaza */
+}
+
+.tarjeta img {
+  width: 200%; /* Asegura que la imagen sea lo suficientemente ancha */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0); /* Posición inicial */
+}
+
+.tarjeta:hover img {
+  transform: translateX(-50%); /* Desplaza la imagen a la izquierda */
+}
+
+.tarjeta h2 {
+  font-size: 20px;
+  margin: 15px 0 5px;
+  color: #333;
+}
+
+.tarjeta p {
+  font-size: 18px;
+  color: #c40000;
+  margin-bottom: 15px;
+}
+
+
+/* FORMULARIO */
+.formulario {
+  margin-top: 60px;
+  background-color: #ff8e8e;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+  color: rgb(159, 6, 6);
+  font-family: 'Playfair Display', serif;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formulario h2 {
+  color: rgb(255, 0, 0);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.opciones {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+}
+
+button[type="submit"] {
+  background-color: #c40000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Playfair Display', serif;
+  display: block;
+  margin: 0 auto;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff0000;
+}
+
+/* FOOTER */
+footer {
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #555;
+  margin-top: 50px;
+  border-top: 1px solid #eee;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .tarjeta {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 10px;
+  }
+
+  .tarjeta {
+    flex: 1 1 100%;
+  }
+
+  .tarjeta img {
+    height: 300px;
+  }
+}

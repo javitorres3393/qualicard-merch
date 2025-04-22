@@ -1,0 +1,100 @@
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+  }
+  
+  .detalle-producto {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 40px;
+    gap: 40px;
+  }
+  
+  .contenedor-imagen img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(196, 0, 0, 0.5);
+  }
+  
+  .contenedor-info {
+    background-color: #7a0000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 50, 50, 0.5);
+    color: #fff;
+    max-width: 500px;
+  }
+  
+  .titulo-producto {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .descripcion {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .precio {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .etiqueta-talla {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+  
+  .selector-talla {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .boton-carrito {
+    background-color: #c40000;
+    color: white;
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Playfair Display', serif;
+    text-transform: uppercase;
+  }
+  
+  .boton-carrito:hover {
+    background-color: #ff1e1e;
+  }
+  
+  @media (max-width: 768px) {
+    .detalle-producto {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .contenedor-imagen img {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .contenedor-info {
+      width: 100%;
+    }
+  }
+  

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <title>Qualica-RD | Merch</title>
+    <link rel="icon" href="./recursos/imagenes/icono.png">
+    <link rel="stylesheet" href="./recursos/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="./recursos/imagenes/logo.png" alt="Logo" class="logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="tienda.html">Tienda</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CINTURON INDEPENDIENTE -->
+    <div class="cinturon">
+        <div class="cinturon-texto">
+            <span>CON EL CÓDIGO "PILAR" 25% DE DESCUENTO &nbsp; • &nbsp;</span>
+            <span>CON EL CÓDIGO "PILAR" 25% DE DESCUENTO &nbsp; • &nbsp;</span>
+            <span>CON EL CÓDIGO "PILAR" 25% DE DESCUENTO &nbsp; • &nbsp;</span>
+            <span>CON EL CÓDIGO "PILAR" 25% DE DESCUENTO &nbsp; • &nbsp;</span>
+            <span>CON EL CÓDIGO "PILAR" 25% DE DESCUENTO</span>
+        </div>
+    </div>
+
+    <!-- CONTENIDO CON MARGENES -->
+    <main class="contenido">
+        <h1 class="titulo-seccion">PRODUCTOS MÁS VENDIDOS</h1>
+
+        <section class="tarjetas">
+            <div class="tarjeta">
+                <a href="camiseta1.html">
+                    <img src="./recursos/imagenes/camiseta1.png" alt="Prenda 1">
+                    <h2>Camiseta Torno</h2>
+                    <p>24,99 €</p>
+                </a>
+            </div>
+            <div class="tarjeta">
+                <a href="polonegro4.html">
+                    <img src="./recursos/imagenes/polonegro4.png" alt="Prenda 1">
+                    <h2>Polo Alien Blanco</h2>
+                    <p>27,99 €</p>
+                </a>
+            </div>
+            <div class="tarjeta">
+                <a href="camiseta2.html">
+                    <img src="./recursos/imagenes/camiseta2.png" alt="Prenda 1">
+                    <h2>Camiseta Altura</h2>
+                    <p>24,99 €</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- FORMULARIO -->
+        <section class="formulario">
+            <h2 class="titulo-seccion"></h2>
+            <form id="formulario-contacto">
+                <div class="opciones">
+                    <label><input type="radio" name="tipo" value="login" checked> Login</label>
+                    <label><input type="radio" name="tipo" value="reclamacion"> Reclamación</label>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div id="login-campos">
+                    <div class="campo">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre">
+                    </div>
+                    <div class="campo">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos">
+                    </div>
+                    <div class="campo">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion">
+                    </div>
+                    <div class="campo">
+                        <label for="cp">Código postal:</label>
+                        <input type="text" id="cp" name="cp">
+                    </div>
+                    <div class="campo">
+                        <label for="dni">DNI:</label>
+                        <input type="text" id="dni" name="dni">
+                    </div>
+                </div>
+                <div id="reclamacion-campos" style="display: none;">
+                    <div class="campo">
+                        <label for="motivo">Motivo de la reclamación:</label>
+                        <textarea id="motivo" name="motivo" rows="4"></textarea>
+                    </div>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>©2025 Alejandro Barnes & Javier Torres</p>
+    </footer>
+
+    <script>
+        const tipoInputs = document.querySelectorAll('input[name="tipo"]');
+        const loginCampos = document.getElementById('login-campos');
+        const reclamacionCampos = document.getElementById('reclamacion-campos');
+
+        tipoInputs.forEach(input => {
+            input.addEventListener('change', () => {
+                if (input.value === 'login') {
+                    loginCampos.style.display = 'block';
+                    reclamacionCampos.style.display = 'none';
+                } else {
+                    loginCampos.style.display = 'none';
+                    reclamacionCampos.style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
